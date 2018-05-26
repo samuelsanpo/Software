@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/estilo2.css">
+    <link rel="stylesheet" href="fonts.css">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <nav>
+    <img src="style/logo.png" alt="User">
+    <ul>
+      <li><a href="inicio.html">Inicio</a></li>
+      <li class="drop">
+        <a href="#">Profesores</a>
+        
+        <div class="dropdownContain">
+
+          <div class="dropOut">
+            <div class="triangle"></div>
+            <ul>
+              <li><a href="crearprofesor.html">Crear Profesor</a></li>
+              <li><a href="buscarprofesor.html">Buscador</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      
+      </li>
+      
+      <li><a href="index.html">Salir</a></li>
+    </ul>
+</nav>
+
+<body>
+<div class="container">
+  <h2>__________________________________________  </h2>
+  <form action="METODO!">
+    <div class="form-group">
+      <label for="email">Nombres:</label>
+      <input type="text" class="form-control" id="nombre" placeholder="Ingrese nombres" name="nombre">
+    </div>
+    <div class="form-group">
+      <label for="text">Apellidos:</label>
+      <input type="text" class="form-control" id="apellido" placeholder="Ingrese apellidos" name="apellido">
+    </div>
+    <div class="form-group">
+       <div class="form-group">
+      <label for="pwd">Numero Telefono:</label>
+      <input type="int" class="form-control" id="Documento" placeholder="Ingrese numero de telefono" name="clave">
+    </div>
+      <label for="text">Usuario:</label>
+      <input type="text" class="form-control" id="usuario" placeholder="Ingrese un nombre de usuario" name="usuario">
+    </div>
+    <div>
+      <label for="text">Tipo de documento</label>
+      <select class="form-control" name="Tipo_documento">
+          <option value="volvo"></option>
+    <option value="volvo">Cedula de ciudadania</option>
+    <option value="saab">Pasaporte</option>
+  </select>
+ /   
+  </div>
+     <div class="form-group">
+      <label for="pwd">Numero Documento:</label>
+      <input type="int" class="form-control" id="Documento" placeholder="Ingrese numero de documento" name="clave">
+    </div>
+
+    
+      <div class="form-group">
+      <label for="pwd">Contraseña:</label>
+      <input type="password" class="form-control" id="clave" placeholder="Ingrese contraseña de usuario" name="clave">
+    </div>
+
+          <div class="form-group">
+      <label for="pwd">Correo Electronico:</label>
+      <input type="email" class="form-control" id="email" placeholder="Ingrese contraseña de usuario" name="pwd">
+    </div>
+
+
+    
+    <button type="submit" class="btn btn-default">Guardar Profesor</button>
+  </form>
+</div>
+
+</body>
+
+
+</html>

@@ -1,0 +1,133 @@
+______
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/estilo2.css">
+    <link rel="stylesheet" href="fonts.css">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  	<meta charset="utf-8">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  
+  <nav>
+  	<img src="style/logo.png" alt="User">
+		<ul>
+			<li><a href="inicio.html">Inicio</a></li>
+			<li class="drop">
+				<a href="#">Profesor</a>
+				
+				<div class="dropdownContain">
+
+					<div class="dropOut">
+						<div class="triangle"></div>
+						<ul>
+							<li><a href="crearprofesor.html">Crear Profesor</a></li>
+							<li><a href="buscarprofesor.html">Buscador</a></li>
+							
+						</ul>
+					</div>
+				</div>
+			
+			</li>
+			
+			<li><a href="index.html">Salir</a></li>
+		</ul>
+</nav>
+
+<body>
+  <script language="javascript">
+    function doSearch()
+    {
+      var tableReg = document.getElementById('datos');
+      var searchText = document.getElementById('searchTerm').value.toLowerCase();
+      var cellsOfRow="";
+      var found=false;
+      var compareWith="";
+ 
+      // Recorremos todas las filas con contenido de la tabla
+      for (var i = 1; i < tableReg.rows.length; i++)
+      {
+        cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+        found = false;
+        // Recorremos todas las celdas
+        for (var j = 0; j < cellsOfRow.length && !found; j++)
+        {
+          compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+          // Buscamos el texto en el contenido de la celda
+          if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1))
+          {
+            found = true;
+          }
+        }
+        if(found)
+        {
+          tableReg.rows[i].style.display = '';
+        } else {
+          // si no ha encontrado ninguna coincidencia, esconde la
+          // fila de la tabla
+          tableReg.rows[i].style.display = 'none';
+        }
+      }
+    }
+  </script>
+  <style>
+    #datos  {border:1px solid #ccc;padding:10px;}
+    #datos tr:nth-child(even) {background:#ccc;}
+    #datos td {padding:5px;}
+    #datos td {text-align: left;} 
+input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+  </style>
+  <div class="container">
+
+          <h2>_____________________________________</h2>  
+        <h2>_____________________________________</h2>  
+<form>
+   <input id="searchTerm" placeholder="Ingrese un dato" type="text" onkeyup="doSearch()" />
+  </form>
+      <p>
+  <table id ="datos" class="table table-condensed">
+    <thead>
+      <tr>
+       <th>Nombre</th><th>Apellidos</th><th>Código</th><th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NombreX1</td> 
+        <td>ApellidoX1</td> 
+        <td>Codigox1</td> 
+        <td><button type="submit" class="btn btn-default">Actualizar</button> 
+            <a href="EliminarTitulacion.jsp?cod=<%=mo.getValueAt(x, 0)%>"> <button type="submit" class="btn btn-default">Eliminar</button></a></td>
+      </tr> 
+            <tr>
+        <td>NombreX2</td> 
+        <td>ApellidoX1</td>
+        <td>Codigox2</td> 
+        <td><button type="submit" class="btn btn-default">Actualizar</button> 
+            <a href="EliminarTitulacion.jsp?cod=<%=mo.getValueAt(x, 0)%>"> <button type="submit" class="btn btn-default">Eliminar</button></a></td>
+      </tr>     
+    </tbody>
+  </table>
+  </p>
+</body>
+
+
+</html> 
+
